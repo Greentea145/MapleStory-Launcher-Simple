@@ -41,11 +41,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(90, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 13);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Currently Downloading:";
+            this.label1.Text = "下載中";
             // 
             // label2
             // 
@@ -66,11 +66,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 33);
+            this.label3.Location = new System.Drawing.Point(90, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Files Updated:";
+            this.label3.Text = "已下載";
             // 
             // label4
             // 
@@ -108,8 +108,11 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "..";
             // 
-            // Download
+            // Update
             // 
+
+            this.Icon = new System.Drawing.Icon("MapleStory.ico");
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 109);
@@ -124,8 +127,8 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Download";
-            this.Text = "Update";
+            this.Name = "Update";
+            this.Text = "更新中";
             this.Load += new System.EventHandler(this.Download_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

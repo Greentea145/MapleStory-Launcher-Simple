@@ -15,7 +15,7 @@ namespace Launcher
 {
     class Settings
     {
-        private static string _xmlURL = "http://linktoyourxml.com/launcher.xml"; // The URL to the XML file you uploaded.
+        private static string _xmlURL = "http://26.177.116.233/launcher.xml"; // The URL to the XML file you uploaded.
 
         // --- DO NOT EDIT THE BOTTOM CODE ---
 

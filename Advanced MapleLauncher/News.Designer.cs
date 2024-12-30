@@ -67,7 +67,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "News";
-            this.Text = "News";
+            this.Text = "公告";
             this.ResumeLayout(false);
             this.PerformLayout();
 

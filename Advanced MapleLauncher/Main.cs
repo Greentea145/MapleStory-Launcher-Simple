@@ -39,13 +39,13 @@ namespace Advanced_MapleLauncher
             }
             catch
             {
-                MessageBox.Show("The launcher failed to check updates! The website may be down right now.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("檢查更新失敗, 或許是伺服器死掉了也說不定呢.", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return null;
             }
 
             List<string> downloadLinks = new List<string>();
-            string[] wzFiles = { "Base.wz", "Character.wz", "Effect.wz", "Etc.wz", "Item.wz", "List.wz", "Map.wz", "Mob.wz", "Morph.wz", "Npc.wz", "Quest.wz", "Reactor.wz", "Skill.wz", "Sound.wz", "String.wz", "TamingMob.wz", "UI.wz" };
+            string[] wzFiles = { "Base.wz", "Character.wz", "Effect.wz", "Etc.wz", "Item.wz", "List.wz", "Map.wz", "Mob.wz", "Morph.wz", "Npc.wz", "Quest.wz", "Reactor.wz", "Skill.wz", "Sound.wz", "String.wz", "TamingMob.wz", "UI.wz", "ijl15.dll"};
 
             // Check update for the client
 
@@ -94,11 +94,12 @@ namespace Advanced_MapleLauncher
 
             if (downloadLinks != null && downloadLinks.Count == 0)
             {
-                Process.Start(textBox1.Text + @"\" + Launcher.Settings.clientName);
+                //Process.Start(textBox1.Text + @"\" + Launcher.Settings.clientName);
+                Process.Start(textBox1.Text + @"\" + Launcher.Settings.clientName ," 26.177.116.233 8484");
             }
             else if(downloadLinks != null)
             {
-                if (MessageBox.Show("An update is required! Do you want to update now?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("發現新更新! 是否開始更新?", "訊息", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     Update newFrm = new Update();
 
@@ -141,7 +142,7 @@ namespace Advanced_MapleLauncher
             }
             catch
             {
-                MessageBox.Show("An error has occured! The website may be down right now.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("發現錯誤, 或許伺服器死掉了也說不定", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return;
             }
@@ -159,7 +160,7 @@ namespace Advanced_MapleLauncher
 
             Invoke(new Action(() =>
             {
-                this.Text = string.Format("{0} Launcher", serverName);
+                this.Text = string.Format("{0} 啟動器", serverName);
 
                 label2.Text = expRate; label4.Text = mesoRate; label6.Text = dropRate;
             }));
@@ -203,7 +204,7 @@ namespace Advanced_MapleLauncher
         {
             if (textBox1.Text == string.Empty)
             {
-                MessageBox.Show("Please set your MapleStory folder path!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("請設定你的楓之谷資料夾!", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -227,7 +228,7 @@ namespace Advanced_MapleLauncher
         {
             if(textBox1.Text == string.Empty)
             {
-                MessageBox.Show("Please set your MapleStory folder path!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("請設定你的楓之谷資料夾!", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -235,11 +236,11 @@ namespace Advanced_MapleLauncher
 
                 if (downloadLinks != null && downloadLinks.Count == 0)
                 {
-                    MessageBox.Show("No updates found!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("未發現任何更新!", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (downloadLinks != null)
                 {
-                    if (MessageBox.Show("An update is required! Do you want to update now?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (MessageBox.Show("發現新更新! 是否開始更新?", "訊息", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         Update newFrm = new Update();
 
@@ -254,17 +255,17 @@ namespace Advanced_MapleLauncher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Process.Start(Launcher.Settings.websiteURL);
+            //Process.Start(Launcher.Settings.websiteURL);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Process.Start(Launcher.Settings.forumURL);
+            //Process.Start(Launcher.Settings.forumURL);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Process.Start(Launcher.Settings.voteURL);
+            //Process.Start(Launcher.Settings.voteURL);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -274,7 +275,37 @@ namespace Advanced_MapleLauncher
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
-            Process.Start("https://forum.ragezone.com/members/2000184932.html");
+            //Process.Start("https://forum.ragezone.com/members/2000184932.html");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
